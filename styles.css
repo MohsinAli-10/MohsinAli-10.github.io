@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1a001a;
-    color: #ffffff;
+    background-color: #1a001a; /* Dark purple background */
+    color: #ffffff; /* White text color */
     scroll-behavior: smooth;
 }
 
 header {
-    background-color: #330033;
+    background-color: #330033; /* Dark purple header */
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -31,14 +31,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #ffffff; /* White nav links */
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #b399ff;
+    color: #b399ff; /* Light purple on hover */
 }
 
 .section {
@@ -52,16 +52,16 @@ nav ul li a:hover {
 }
 
 #home {
-    background: linear-gradient(135deg, #330033 0%, #660066 100%);
+    background: linear-gradient(135deg, #330033 0%, #660066 100%); /* Gradient dark purple */
 }
 
 #about, #projects, #contact {
-    background: #1a001a;
+    background: #1a001a; /* Dark purple background for sections */
     margin-top: 50px;
 }
 
 .project {
-    background: #330033;
+    background: #330033; /* Dark purple project cards */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
@@ -86,26 +86,26 @@ form label {
 form input, form textarea, form button {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #b399ff;
+    border: 1px solid #b399ff; /* Light purple borders */
     border-radius: 4px;
-    background: #1a001a;
-    color: #ffffff;
+    background: #1a001a; /* Dark purple background for form elements */
+    color: #ffffff; /* White text color */
 }
 
 form input:focus, form textarea:focus {
     outline: none;
-    border-color: #b399ff;
+    border-color: #b399ff; /* Light purple on focus */
 }
 
 form button {
-    background-color: #660066;
-    color: #ffffff;
+    background-color: #660066; /* Darker purple button */
+    color: #ffffff; /* White text color */
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #b399ff;
+    background-color: #b399ff; /* Light purple on hover */
 }
 
 @keyframes fadeIn {
