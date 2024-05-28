@@ -3,14 +3,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1a001a; /* Dark purple background */
+    background-color: #000000; /* Black background */
     color: #ffffff; /* White text color */
     scroll-behavior: smooth;
 }
 
 header {
-    background-color: #330033; /* Dark purple header */
-    padding: 10px 0;
+    background-color: #1a1a1a; /* Darker black header */
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -27,18 +27,18 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 25px;
 }
 
 nav ul li a {
-    color: #ffffff; /* White nav links */
+    color: #cccccc; /* Silver nav links */
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #b399ff; /* Light purple on hover */
+    color: #b399ff; /* Dark purple on hover */
 }
 
 .section {
@@ -48,29 +48,39 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #home {
-    background: linear-gradient(135deg, #330033 0%, #660066 100%); /* Gradient dark purple */
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); /* Black gradient */
+    color: #cccccc; /* Silver text color */
 }
 
 #about, #projects, #contact {
-    background: #1a001a; /* Dark purple background for sections */
+    background: #1a1a1a; /* Darker black background for sections */
+    color: #cccccc; /* Silver text color */
     margin-top: 50px;
 }
 
 .project {
-    background: #330033; /* Dark purple project cards */
+    background: #262626; /* Darker gray project cards */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .project:hover {
     transform: translateY(-10px);
+    background-color: #333333; /* Slightly lighter on hover */
 }
 
 form {
@@ -86,26 +96,27 @@ form label {
 form input, form textarea, form button {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #b399ff; /* Light purple borders */
+    border: 1px solid #b399ff; /* Dark purple borders */
     border-radius: 4px;
-    background: #1a001a; /* Dark purple background for form elements */
+    background: #1a1a1a; /* Darker black background for form elements */
     color: #ffffff; /* White text color */
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
 form input:focus, form textarea:focus {
     outline: none;
-    border-color: #b399ff; /* Light purple on focus */
+    border-color: #b399ff; /* Dark purple on focus */
 }
 
 form button {
-    background-color: #660066; /* Darker purple button */
+    background-color: #b399ff; /* Dark purple button */
     color: #ffffff; /* White text color */
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #b399ff; /* Light purple on hover */
+    background-color: #cccccc; /* Silver on hover */
 }
 
 @keyframes fadeIn {
