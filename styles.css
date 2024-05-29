@@ -3,19 +3,19 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000000; /* Black background */
+    background-color: #1A001A; /* Dark purple background */
     color: #ffffff; /* White text color */
     scroll-behavior: smooth;
 }
 
 header {
-    background-color: #1a1a1a; /* Darker black header */
+    background-color: #140014; /* Darker dark purple header */
     padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
 }
 
 nav ul {
@@ -38,7 +38,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #b399ff; /* Dark purple on hover */
+    color: #ff00ff; /* Neon purple on hover */
 }
 
 .section {
@@ -59,28 +59,29 @@ nav ul li a:hover {
 }
 
 #home {
-    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); /* Black gradient */
+    background: linear-gradient(135deg, #140014 0%, #1A001A 100%); /* Dark purple gradient */
     color: #cccccc; /* Silver text color */
 }
 
 #about, #projects, #contact {
-    background: #1a1a1a; /* Darker black background for sections */
+    background: #140014; /* Darker dark purple background for sections */
     color: #cccccc; /* Silver text color */
     margin-top: 50px;
 }
 
 .project {
-    background: #262626; /* Darker gray project cards */
+    background: #1A001A; /* Dark purple project cards */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
     transform: translateY(-10px);
-    background-color: #333333; /* Slightly lighter on hover */
+    background-color: #330033; /* Slightly lighter dark purple on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Brighter neon purple on hover */
 }
 
 form {
@@ -96,27 +97,29 @@ form label {
 form input, form textarea, form button {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #b399ff; /* Dark purple borders */
+    border: 1px solid #ff00ff; /* Neon purple borders */
     border-radius: 4px;
-    background: #1a1a1a; /* Darker black background for form elements */
+    background: #1A001A; /* Dark purple background for form elements */
     color: #ffffff; /* White text color */
-    transition: border-color 0.3s, background-color 0.3s;
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 form input:focus, form textarea:focus {
     outline: none;
-    border-color: #b399ff; /* Dark purple on focus */
+    border-color: #ff00ff; /* Neon purple on focus */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
 }
 
 form button {
-    background-color: #b399ff; /* Dark purple button */
+    background-color: #ff00ff; /* Neon purple button */
     color: #ffffff; /* White text color */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 form button:hover {
-    background-color: #cccccc; /* Silver on hover */
+    background-color: #cc00cc; /* Slightly darker neon purple on hover */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
 }
 
 @keyframes fadeIn {
