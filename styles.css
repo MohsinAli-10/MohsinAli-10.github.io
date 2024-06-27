@@ -7,18 +7,18 @@ body {
     color: #ffffff; /* White text color */
     scroll-behavior: smooth;
     display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh;
 }
 
 header {
     background-color: #2A002A; /* Lighter dark purple */
     padding: 20px 0;
     width: 200px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 2px 0 4px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
+    height: auto; /* Adjust height to fit the content */
+    box-shadow: none; /* Remove the shadow */
+    border-radius: 10px; /* Rounded corners for the panel */
 }
 
 nav ul {
@@ -44,17 +44,36 @@ nav ul li a {
     color: #cccccc; /* Silver nav links */
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    position: relative; /* Needed for the droplet effect */
+    overflow: hidden; /* Hide the droplet effect overflow */
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: #1A001A; /* Dark purple for the droplet effect */
+    transition: transform 0.6s;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+nav ul li a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 nav ul li a:hover {
-    background-color: #ff00ff; /* Neon purple on hover */
     color: #ffffff; /* White text on hover */
 }
 
 main {
-    margin-left: 220px; /* Space for the sidebar */
-    width: calc(100% - 220px); /* Adjust width to fit the remaining space */
+    width: calc(100% - 240px); /* Adjust width to fit the remaining space */
+    margin-left: 20px; /* Margin to the left of the panel */
 }
 
 .section {
