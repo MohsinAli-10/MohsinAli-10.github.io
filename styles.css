@@ -9,8 +9,9 @@ body {
 }
 
 header {
-    background-color: #1A001A; /* Same color as body */
+    background-color: #140014; /* Darker dark purple header */
     padding: 20px 0;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -30,15 +31,102 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff; /* White text color */
+    color: #cccccc; /* Silver nav links */
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
-    padding: 10px 20px; /* Padding for button style */
-    border-radius: 8px; /* Rounded corners */
-    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
 }
 
 nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker black on hover */
+    color: #ff00ff; /* Neon purple on hover */
+}
+
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#home {
+    background: linear-gradient(135deg, #140014 0%, #1A001A 100%); /* Dark purple gradient */
+    color: #cccccc; /* Silver text color */
+}
+
+#about, #projects, #contact {
+    background: #140014; /* Darker dark purple background for sections */
+    color: #cccccc; /* Silver text color */
+    margin-top: 50px;
+}
+
+.project {
+    background: #1A001A; /* Dark purple project cards */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    background-color: #330033; /* Slightly lighter dark purple on hover */
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Brighter neon purple on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ff00ff; /* Neon purple borders */
+    border-radius: 4px;
+    background: #1A001A; /* Dark purple background for form elements */
+    color: #ffffff; /* White text color */
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #ff00ff; /* Neon purple on focus */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
+}
+
+form button {
+    background-color: #ff00ff; /* Neon purple button */
+    color: #ffffff; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    background-color: #cc00cc; /* Slightly darker neon purple on hover */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
