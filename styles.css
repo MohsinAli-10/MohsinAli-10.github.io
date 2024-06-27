@@ -52,6 +52,11 @@ nav ul li a:hover {
     color: #ffffff; /* White text on hover */
 }
 
+main {
+    margin-left: 220px; /* Space for the sidebar */
+    width: calc(100% - 220px); /* Adjust width to fit the remaining space */
+}
+
 .section {
     padding: 100px 20px;
     min-height: 100vh;
@@ -62,7 +67,6 @@ nav ul li a:hover {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    margin-left: 220px; /* Space for the sidebar */
 }
 
 .section.animate {
