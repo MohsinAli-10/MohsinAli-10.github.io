@@ -6,39 +6,50 @@ body {
     background-color: #1A001A; /* Dark purple background */
     color: #ffffff; /* White text color */
     scroll-behavior: smooth;
+    display: flex;
 }
 
 header {
-    background-color: #140014; /* Darker dark purple header */
+    background-color: #2A002A; /* Lighter dark purple */
     padding: 20px 0;
+    width: 200px;
+    height: 100vh;
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
+    box-shadow: 2px 0 4px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul li {
-    margin: 0 25px;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
 }
 
 nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #000000; /* Black background */
+    border-radius: 8px; /* Rounded corners */
     color: #cccccc; /* Silver nav links */
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff00ff; /* Neon purple on hover */
+    background-color: #ff00ff; /* Neon purple on hover */
+    color: #ffffff; /* White text on hover */
 }
 
 .section {
@@ -51,6 +62,7 @@ nav ul li a:hover {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin-left: 220px; /* Space for the sidebar */
 }
 
 .section.animate {
@@ -59,7 +71,7 @@ nav ul li a:hover {
 }
 
 #home {
-    background: linear-gradient(135deg, #140014 0%, #1A001A 100%); /* Dark purple gradient */
+    background: linear-gradient(135deg, #2A002A 0%, #1A001A 100%); /* Dark purple gradient */
     color: #cccccc; /* Silver text color */
 }
 
