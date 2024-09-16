@@ -1,157 +1,214 @@
-body {
-    font-family: Arial, sans-serif;
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1A001A; /* Dark purple background */
-    color: #ffffff; /* White text color */
-    scroll-behavior: smooth;
-}
-
-header {
-    background-color: #140014; /* Darker dark purple header */
-    padding: 20px 0;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: black;
+    background-color: white;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styles */
+  nav {
     position: fixed;
-    width: 100%;
-    top: 0;
+    top: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    border: 1px solid white; /* Thin white border */
+    border-radius: 25px; /* Rounded corners for the pill shape */
+    padding: 10px 20px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
-}
-
-nav ul {
-    list-style: none;
+  }
+  
+  nav ul {
     display: flex;
     justify-content: center;
-    margin: 0;
+    list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    margin: 0 25px;
-}
-
-nav ul li a {
-    color: #cccccc; /* Silver nav links */
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px; /* Space between menu items */
+  }
+  
+  nav ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 18px;
+    padding: 10px 20px;
     transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff00ff; /* Neon purple on hover */
-}
-
-.section {
+  }
+  
+  nav ul li a:hover {
+    color: #ff0000;
+  }
+  
+  .download-btn {
+    background-color: #cc1515;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .download-btn:hover {
+    background-color: #700202;
+    color: white; /* White text color on hover */
+  }
+  
+  /* Section Styles */
+  section {
     padding: 100px 20px;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    opacity: 1;
-    transform: translateY(0);
-    position: relative; /* Ensure position for pseudo-elements */
-}
-
-.section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(
-        circle closest-corner at center,
-        hsla(270, 100%, 50%, 0.1), transparent
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-.section:hover::before {
-    opacity: 1;
-}
-
-.home-section {
-    background: linear-gradient(135deg, #140014 0%, #1A001A 100%); /* Dark purple gradient */
-    color: #cccccc; /* Silver text color */
-}
-
-#projects, #contact {
-    background: #140014; /* Darker dark purple background for sections */
-    color: #cccccc; /* Silver text color */
-    margin-top: -20px; /* Adjust the top margin to overlap with the previous section */
-}
-
-.project {
-    background: #1A001A; /* Dark purple project cards */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-    position: relative; /* Ensure position for pseudo-elements */
-    margin-bottom: -20px; /* Overlap with the next card */
-}
-
-.project:hover {
-    transform: translateY(-10px);
-    background-color: #330033; /* Slightly lighter dark purple on hover */
-    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Brighter neon purple on hover */
-}
-
-.project::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(
-        circle closest-corner at center,
-        hsla(270, 100%, 50%, 0.05), transparent
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-.project:hover::before {
-    opacity: 1;
-}
-
-form {
+    scroll-snap-align: start; /* Ensures the section snaps to the start */
+  }
+  
+  /* Container for Scroll Snapping */
+  html, body {
+    scroll-snap-type: y mandatory; /* Enable vertical snapping */
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  /* Specific Section Styles */
+  #about,
+  #projects,
+  #resume {
+    background-color: white; /* Sections with white background */
+  }
+  
+  #education,
+  #certificates {
+    background-color: #000; /* Sections with black background */
+    color: white; /* Ensure text is visible on black background */
+  }
+  
+  /* Title Styles */
+  h2 {
+    font-size: 2em; /* Larger font size for headers */
+    margin-bottom: 30px; /* Space below headers */
+  }
+  
+  /* Specific Styles for Certificates */
+  #certificates h2 {
+    color: white; /* White color for the certificates section title */
+  }
+  
+  /* Paragraph Styles */
+  p {
+    margin-bottom: 20px; /* Increased space between paragraphs */
+  }
+  
+  /* Scrollable Container Styles (For Projects and Certificates) */
+  .scroll-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form textarea, form button {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ff00ff; /* Neon purple borders */
-    border-radius: 4px;
-    background: #1A001A; /* Dark purple background for form elements */
-    color: #ffffff; /* White text color */
-    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    outline: none;
-    border-color: #ff00ff; /* Neon purple on focus */
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
-}
-
-form button {
-    background-color: #ff00ff; /* Neon purple button */
-    color: #ffffff; /* White text color */
+    justify-content: center;
+    padding: 50px 0;
+    position: relative; /* Added to position the arrows correctly */
+  }
+  
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px 0;
+    gap: 20px;
+  }
+  
+  /* Scrollbar Customization */
+  .scroll-container::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Card Styles */
+  .project-card, .certificate-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Display 3 cards at a time */
+    height: 200px; /* Adjust height to make it 3x larger */
+    flex-shrink: 0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover, .certificate-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Specific Styles for Certificates */
+  #certificates .certificate-card {
+    color: black; /* Black text for certificate cards in the certificates section */
+  }
+  
+  /* Specific Section Styling */
+  #resume a {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #resume a:hover {
+    background-color: #333;
+  }
+  
+  /* Arrow Styles */
+  .arrow {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-form button:hover {
-    background-color: #cc00cc; /* Slightly darker neon purple on hover */
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon purple shadow */
-}
+    z-index: 100;
+  }
+  
+  .arrow-left {
+    left: 50px; /* Adjust as needed */
+    border-left: 15px solid red; /* Increase border width for bolder arrow */
+    border-top: 15px solid red; /* Increase border width for bolder arrow */
+    transform: translateY(-50%) rotate(-45deg);
+    transform-origin: center;
+  }
+  
+  .arrow-right {
+    right: 50px; /* Adjust as needed */
+    border-right: 15px solid red; /* Increase border width for bolder arrow */
+    border-top: 15px solid red; /* Increase border width for bolder arrow */
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center;
+  }
+  
