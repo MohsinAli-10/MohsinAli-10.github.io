@@ -106,6 +106,16 @@ html, body {
     width: calc(100% - 40px); /* Full width for small screens */
     height: auto; /* Adjust height automatically */
   }
+
+  /* Adjust title and paragraph font size for mobile */
+  h2 {
+    font-size: 1.25em; /* Smaller for mobile */
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
 }
 
 /* Specific Section Styles */
@@ -123,7 +133,7 @@ html, body {
 
 /* Title Styles */
 h2 {
-  font-size: 1.5em; /* Adjusted for mobile */
+  font-size: 1.5em; /* Adjusted for larger screens */
   margin-bottom: 20px;
 }
 
@@ -148,7 +158,7 @@ p {
   width: 90%;
   max-width: 100%;
   padding: 20px 0;
-  gap: 10px; /* Adjusted for mobile */
+  gap: 20px; /* Increased gap for larger screens */
 }
 
 /* Scrollbar Customization */
@@ -170,15 +180,16 @@ p {
 }
 
 img {
-  width: 300px; /* Adjust this to the size you need */
-  height: auto; /* This keeps the aspect ratio */
+  width: 100%; /* Responsive image width */
+  max-width: 300px; /* Limits image size */
+  height: auto; /* Maintains aspect ratio */
 }
 
 /* Card Styles */
 .project-card, .certificate-card {
   background-color: #f0f0f0;
   border-radius: 10px;
-  width: calc(33.33% - 20px);
+  width: calc(33.33% - 20px); /* Three columns for larger screens */
   height: 200px;
   flex-shrink: 0;
   padding: 20px;
@@ -209,7 +220,7 @@ img {
 #education .education-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
-  grid-auto-rows: auto; /* One row */
+  grid-auto-rows: auto; /* Rows adjust based on content */
   gap: 20px;
 }
 
