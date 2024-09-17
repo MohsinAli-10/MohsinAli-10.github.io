@@ -1,244 +1,250 @@
 /* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: black;
-    background-color: white;
-    overflow-x: hidden;
-  }
-  
-  /* Navbar Styles */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: black;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+/* Download CV Button */
+.download-btn {
+  background-color: #cc1515;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  background-color: #700202;
+  color: white;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 20px; /* Reduced padding for smaller screens */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+/* Container for Scroll Snapping */
+html, body {
+  scroll-snap-type: y mandatory;
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 768px) {
   nav {
-    position: fixed;
-    top: 10px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000;
-    border: 1px solid white; /* Thin white border */
-    border-radius: 25px; /* Rounded corners for the pill shape */
-    padding: 10px 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center; /* Center items vertically */
-    gap: 10px; /* Space between items */
-    max-width: 100%; /* Prevent exceeding viewport width */
-    overflow: hidden; /* Hide any overflowing content */
+    padding: 10px;
+    flex-direction: column;
+    gap: 5px;
   }
-  
+
   nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
   }
-  
-  nav ul li {
-    margin: 0; /* Remove extra space around menu items */
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #ff0000;
-  }
-  
-  /* Download CV Button */
+
   .download-btn {
-    background-color: #cc1515;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    white-space: nowrap; /* Prevent text wrapping */
+    padding: 8px 15px;
   }
-  
-  .download-btn:hover {
-    background-color: #700202;
-    color: white; /* White text color on hover */
+
+  .project-card, .certificate-card, .education-card {
+    width: calc(100% - 40px); /* Full width for small screens */
+    height: auto; /* Adjust height automatically */
   }
-  
-  /* Section Styles */
-  section {
-    padding: 100px 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    scroll-snap-align: start; /* Ensures the section snaps to the start */
-  }
-  
-  /* Container for Scroll Snapping */
-  html, body {
-    scroll-snap-type: y mandatory; /* Enable vertical snapping */
-  }
-  
-  /* Adjustments for Large Screens */
-  @media (min-width: 1200px) {
-    nav {
-      max-width: 1200px; /* Maximum width for larger screens */
-    }
-  }
-  
-  /* Adjustments for Smaller Screens */
-  @media (max-width: 768px) {
-    nav {
-      padding: 10px;
-      flex-direction: column; /* Stack items vertically on small screens */
-      gap: 5px;
-    }
-  
-    nav ul {
-      flex-direction: column;
-    }
-  
-    .download-btn {
-      padding: 8px 15px;
-    }
-  }
-  
-  /* Specific Section Styles */
-  #about,
-  #projects,
-  #resume {
-    background-color: white; /* Sections with white background */
-  }
-  
-  #education,
-  #certificates {
-    background-color: #000; /* Sections with black background */
-    color: white; /* Ensure text is visible on black background */
-  }
-  
-  /* Title Styles */
-  h2 {
-    font-size: 2em; /* Larger font size for headers */
-    margin-bottom: 30px; /* Space below headers */
-  }
-  
-  /* Specific Styles for Certificates */
-  #certificates h2 {
-    color: white; /* White color for the certificates section title */
-  }
-  
-  /* Paragraph Styles */
-  p {
-    margin-bottom: 20px; /* Increased space between paragraphs */
-  }
-  
-  /* Scrollable Container Styles (For Projects and Certificates) */
-  .scroll-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0;
-    position: relative; /* Added to position the arrows correctly */
-  }
-  
-  .scroll-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 90%;
-    max-width: 1200px;
-    padding: 20px 0;
-    gap: 20px;
-  }
-  
-  /* Scrollbar Customization */
-  .scroll-container::-webkit-scrollbar {
-    height: 10px;
-  }
-  
-  .scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  .scroll-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-  
-  .scroll-container::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  
-  /* Card Styles */
-  .project-card, .certificate-card {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    width: calc(33.33% - 20px); /* Display 3 cards at a time */
-    height: 200px; /* Adjust height to make it 3x larger */
-    flex-shrink: 0;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .project-card:hover, .certificate-card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Specific Styles for Certificates */
-  #certificates .certificate-card {
-    color: black; /* Black text for certificate cards in the certificates section */
-  }
-  
-  /* Specific Section Styling */
-  #resume a {
-    font-size: 20px;
-    padding: 10px 20px;
-    background-color: #000;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  #resume a:hover {
-    background-color: #333;
-  }
-  
-  /* Arrow Styles */
-  .arrow {
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    position: absolute;
-    top: 55%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 100;
-  }
-  
-  .arrow-left {
-    left: 50px; /* Adjust as needed */
-    border-left: 15px solid red; /* Increase border width for bolder arrow */
-    border-top: 15px solid red; /* Increase border width for bolder arrow */
-    transform: translateY(-50%) rotate(-45deg);
-    transform-origin: center;
-  }
-  
-  .arrow-right {
-    right: 50px; /* Adjust as needed */
-    border-right: 15px solid red; /* Increase border width for bolder arrow */
-    border-top: 15px solid red; /* Increase border width for bolder arrow */
-    transform: translateY(-50%) rotate(45deg);
-    transform-origin: center;
-  }
-  
+}
+
+/* Specific Section Styles */
+#about,
+#projects,
+#resume {
+  background-color: white;
+}
+
+#education,
+#certificates {
+  background-color: #000;
+  color: white;
+}
+
+/* Title Styles */
+h2 {
+  font-size: 1.5em; /* Adjusted for mobile */
+  margin-bottom: 20px;
+}
+
+/* Paragraph Styles */
+p {
+  margin-bottom: 20px;
+}
+
+/* Scrollable Container Styles (For Projects and Certificates) */
+.scroll-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 90%;
+  max-width: 100%;
+  padding: 20px 0;
+  gap: 10px; /* Adjusted for mobile */
+}
+
+/* Scrollbar Customization */
+.scroll-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+img {
+  width: 300px; /* Adjust this to the size you need */
+  height: auto; /* This keeps the aspect ratio */
+}
+
+/* Card Styles */
+.project-card, .certificate-card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  width: calc(33.33% - 20px);
+  height: 200px;
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover, .certificate-card:hover {
+  transform: scale(1.05);
+}
+
+/* Education Card Styles */
+.education-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: scale(1.05);
+}
+
+/* Grid layout for education cards */
+#education .education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-auto-rows: auto; /* One row */
+  gap: 20px;
+}
+
+#education .education-card {
+  width: 100%; /* Make the cards fill the grid column */
+  height: auto;
+  color: black;
+  background-color: #f9f9f9; 
+  border: none; /* Remove border */
+}
+
+/* Specific Styles for Education Section */
+#education h2 {
+  color: white;
+}
+
+#education .education-card h2 {
+  color: black;
+}
+
+#certificates .certificate-card {
+  color: black;
+}
+
+/* Specific Section Styling */
+#resume a {
+  font-size: 18px; /* Slightly reduced for mobile */
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#resume a:hover {
+  background-color: #333;
+}
