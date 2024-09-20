@@ -190,7 +190,7 @@ img {
   background-color: #f0f0f0;
   border-radius: 10px;
   width: calc(33.33% - 20px); /* Three columns for larger screens */
-  height: 200px;
+  height: auto;
   flex-shrink: 0;
   padding: 20px;
   text-align: center;
