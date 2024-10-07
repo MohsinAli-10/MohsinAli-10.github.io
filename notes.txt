@@ -1,0 +1,6 @@
+1. Make the services section commented out
+2. Add a section for certificates
+3. Add a section for portfolio projects
+4. Add your education section in the resume part
+5. Fix the floating box on the top of skills
+6. Fix the images on the side of the about me
