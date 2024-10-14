@@ -12,3 +12,8 @@
 5. Add background images.
 6. Services have to be commented out.
 7. Add project images.
+
+summarize recommendations
+add projects
+add certifications
+write a couple of blogs on medium about LLMs
