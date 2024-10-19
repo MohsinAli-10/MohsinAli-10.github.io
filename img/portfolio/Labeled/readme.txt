@@ -1,0 +1,1 @@
+Use draw.io and the gradient in this folder to make the label. The font is Helvetica and the size varies from 90 to 120 px. The images are generated using imagine commands from Meta.
