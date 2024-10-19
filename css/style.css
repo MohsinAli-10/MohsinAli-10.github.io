@@ -720,7 +720,7 @@ h6 { font-size: 16px; }
 	font-size: 260px;
 	color: transparent;
 	-webkit-text-stroke: 3px rgba(255,255,255,.3);
-	text-stroke: 3px rgba(255,255,255,.3);
+	/* text-stroke: 3px rgba(255,255,255,.3); */
 	font-family: "Montserrat";
 	font-weight: 700;
 }
@@ -2401,9 +2401,9 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
-}
+/* input[type=number] {
+    -moz-appearance:textfield;  Firefox 
+} */
 .aali_tm_contact .message_area{
 	width: 100%;
 	float: left;
