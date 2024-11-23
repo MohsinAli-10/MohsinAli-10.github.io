@@ -1,0 +1,84 @@
+1. Make the services section commented out
+2. Add a section for certificates
+4. Add your education section in the resume part
+5. Fix the floating box on the top of skills
+6. Fix the images on the side of the about me
+
+
+6. Fix the logos and images
+5. Draw logos for certifications
+4. Darw logos for projects
+3. links and images for my blogs
+2. add projects - project titles in images
+1. write a couple of blogs on medium about LLMs
+
+
+Projects
+
+Proximal Policy Optimization (PPO) reinforcement learning to fine-tune a FLAN-T5 model using Facebook's hate speech reward model to generate more positive summaries
+Enhanced dialogue summarization using PEFT fine-tuning of the FLAN-T5 LLM
+AI Coffee shop barista using Llama Index and a RAG-assisted pre-trained LLM (Falcon-14B)
+Custom Conditional GAN (CGAN) based synthesis of novel images using image prompts from the STL-10 Dataset
+DeblurGANv2-based restoration of deteriorated, old images
+Custom Auto-Encoder based regeneration of corrupted images using the Flickr-Faces-HQ Dataset (FFHQ)
+Custom CNN-based wheat disease classification
+Premier League football match winner prediction using ensemble Machine Learning
+Machine Learning for Telecom Customers Churn prediction
+End-to-End ML student performance predictor with EDA, FLASK Web App, AWS deployment, and CI/CD Pipeline
+Comparison of zero shot, one shot, and few shot FLAN-T5 LLM inferences for dialogue summarization
+Multinomial Naive-Bayes algorithm-based Twitter airline feedback sentiment analysis
+Linear regression-based student graduate admission chance analysis against GRE scores
+Analysis of different initializations and dropout techniques in a custom NN-based predictor for the MNIST Fashion dataset
+Custom KNN, skKNN, and cKNN-based classifiers for the 'Cats and Dogs' and 'Weather' datasets
+Developed a web-based URL shortener using Flask, enabling efficient and reliable link management through concise URLs
+
+NLP - CV - ML - DL - MLOps
+
+
+1. End-to-End ML Student Performance Predictor  
+    Developed a predictive system with EDA, a FLASK web app, AWS deployment, and CI/CD integration. 
+
+2. Reinforcement Learning for Positive Dialogue Generation  
+   Fine-tuned FLAN-T5 with Proximal Policy Optimization (PPO) using Facebook’s hate speech reward model to create positive summaries.  
+
+3. Enhanced LLM Summarization with PEFT  
+   Applied PEFT fine-tuning to optimize FLAN-T5 for more accurate dialogue summarization.  
+
+4. AI Coffee Shop Barista with Llama Index & Falcon-14B  
+   Built an AI-powered barista using Retrieval-Augmented Generation (RAG) and pre-trained Falcon-14B LLM.  
+
+5. Novel Image Generation with CGANs  
+   Developed a Conditional GAN to synthesize new images using prompts from the STL-10 dataset.  
+
+6. Old Image Restoration with DeblurGANv2  
+   Restored deteriorated images through a GAN-based approach for high-quality restoration.  
+
+7. Auto-Encoder for Image Regeneration  
+   Reconstructed corrupted images using custom Auto-Encoders on the FFHQ dataset.  
+
+8. CNN-Based Wheat Disease Classification  
+   Designed a custom CNN to identify wheat diseases with high accuracy.  
+
+9. Premier League Match Prediction with ML Ensembles  
+   Forecasted football match outcomes using advanced ensemble machine learning techniques.  
+
+10. Churn Prediction for Telecom Customers  
+   Predicted customer churn with ML models to support retention strategies.   
+
+11. LLM Zero/Few-Shot Performance Comparison  
+    Evaluated FLAN-T5 LLM for zero, one, and few-shot inference in dialogue summarization tasks.  
+
+12. Sentiment Analysis of Airline Feedback on Twitter  
+    Applied Naive Bayes to classify sentiment in social media feedback.  
+
+13. Graduate Admission Prediction with Regression  
+    Analyzed the impact of GRE scores on admission chances using linear regression.  
+
+14. Neural Network Optimization for Fashion MNIST  
+    Explored dropout techniques and initialization strategies to enhance custom NN models.  
+
+15. KNN-Based Classification for Cats, Dogs, and Weather  
+    Implemented custom KNN classifiers to categorize animal and weather datasets.
+
+16. URL Shortener with Flask
+    Developed a web-based URL shortener using Flask, enabling efficient and reliable link management through concise URLs.
